@@ -1,3 +1,11 @@
+body {
+	margin: 10px 10px 10px 10px;
+}
+
+li {
+	margin-top: 10px;
+}
+
 #dropzone {
 	text-align: center;
 	/*vertical-align: middle;*/
