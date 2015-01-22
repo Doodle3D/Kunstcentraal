@@ -1,0 +1,68 @@
+body {
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+	body {
+		background-repeat: no-repeat;
+		background-position: center; 
+		background-image: url("bg_vertical.jpg");
+	}
+	svg {
+		display: none;
+	}
+}
+
+#logo { position: absolute; left: 300px; }
+#btnShapes { left: 695px; top: 195px; }
+#btnPrint { left: 805px; top: 15px; }
+#btnNew { left: 10px; top: 25px; }
+#btnSave { left: 10px; top: 200px; }
+#btnOops { left: 10px; top: 480px; }
+#btnStop { left: 885px; top: 200px; }
+#btnUp { left: 555px; top: 670px; }
+#btnDown { left: 615px; top: 670px; }
+#btnZoomIn { left: 200px; top: 670px; }
+#btnZoomOut { left: 265px; top: 670px; }
+#btnTwistLeft { left: 715px; top: 670px; }
+#btnTwistRight { left: 780px; top: 670px; }
+
+.hidden {
+	display: none;
+}
+
+.btn {
+	position: absolute;
+	-webkit-user-select: none;
+	cursor: hand;
+}
+
+#svg {
+	position: absolute;
+	width: 480px;
+	height: 450px;
+	left: 200px;
+	top: 195px;
+}
+
+#vsvg {
+	position: absolute;
+	width: 170px;
+	height: 450px;
+	left: 680px;
+	top: 195px;
+	border-left: 3px solid black;
+}
+
+#canvas {
+	position: absolute;
+	background-color: white;
+	cursor: hand;
+	top: 195px;
+	left: 200px;
+	height: 450px;
+	width: 650px;
+	border: 3px solid black;
+	border-radius: 10px;
+}

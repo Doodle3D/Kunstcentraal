@@ -1,0 +1,70 @@
+<style>
+label {
+	font-weight: bold;
+	margin-top: 10px;
+	display: block;
+	color: #444;
+}
+
+input[type="text"] {
+	width: 200px;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+select {
+	width: 200px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+	function showPopUp() {
+		var naam = jQuery("#naam").val();
+		var school = jQuery("#school").val();
+		var klas = jQuery("#klas").val();
+		var prefix = escape(school+"_groep_"+klas+"_"+naam+"_");
+
+		if (name==undefined || school==undefined || klas==undefined || school=="" || klas=="") return;
+		
+		jQuery('#btnStart').attr("href","/draw/popup.html?prefix=" + prefix);
+		jQuery('#btnStart').trigger('click');
+	}
+</script>
+
+<label for="naam">1. Hoe heet je?</label>
+<input id="naam" name="naam" type="text" value="" onkeydown="checkButtonState()">
+
+<label for="school">2. Op welke school zit je?</label>
+<select id="school" name="school">
+<option value="">Secteer hier je school...</option>
+<option disabled>-------------------------</option>
+<option value="Koningin Julianaschool">Koningin Julianaschool</option>
+<option value="Jenaplanschool Vlinderbos">Jenaplanschool Vlinderbos</option>
+<option value="Prinses Beatrixschool">Prinses Beatrixschool</option>
+<option value="Willespoort">Willespoort</option>
+<option value="PCB De Schakel">PCB De Schakel</option>
+<option value="De Pijlstaart">De Pijlstaart</option>
+<option value="St. Jozefschool">St. Jozefschool</option>
+<option value="Christelijke Nationale School">Christelijke Nationale School</option>
+<option value="OBS Piet Mondriaan">OBS Piet Mondriaan</option>
+<option value="Piusschool">Piusschool</option>
+<option value="Paulusschool">Paulusschool</option>
+<option value="Ichthus">Ichthus</option>
+</select>
+
+<label for="klas">3. In welke groep zit je?</label>
+<select id="klas" name="klas">
+	<option value="">Secteer hier je groep...</option>
+	<option disabled>-------------------------</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+</select>
+
+<label for="btnImgStart">4. Klik tenslotte op start om te beginnen met tekenen.</label>
+<a id="btnImgStart" href="javascript:showPopUp();"><img src="/draw/Doodle3D-startknop.png"/></a>
+<a id="btnStart" style="display:none" class="fancybox iframe {width:860,height:600}" href="#">hidden</a>
+

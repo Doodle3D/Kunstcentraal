@@ -1,0 +1,6 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<FilesMatch "\.(svg)$">
+  Header set Content-Disposition attachment
+</FilesMatch>
